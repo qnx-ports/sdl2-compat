@@ -92,7 +92,7 @@ set(SDL2COMPAT_VENDOR_INFO "" CACHE STRING "Vendor name and/or version to add to
 set(SDL2COMPAT_FRAMEWORK FALSE)
 #FIXME: should SDL2-compat modify vendor_info/revision information?
 
-if(SDL2COMPAT_STATIC AND NOT (CMAKE_SYSTEM_NAME MATCHES "Linux"))
+if(SDL2COMPAT_STATIC AND NOT (CMAKE_SYSTEM_NAME MATCHES "Linux|QNX"))
   message(FATAL_ERROR "Static builds are only supported on Linux.")
 endif()
 
